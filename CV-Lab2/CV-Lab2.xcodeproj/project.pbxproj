@@ -14,6 +14,7 @@
 		7583E2312199CB22006AA4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7583E22F2199CB22006AA4EA /* LaunchScreen.storyboard */; };
 		7583E23C2199CB22006AA4EA /* CV_Lab2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583E23B2199CB22006AA4EA /* CV_Lab2Tests.swift */; };
 		7583E2472199CB22006AA4EA /* CV_Lab2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7583E2462199CB22006AA4EA /* CV_Lab2UITests.swift */; };
+		75C43CE521A5B27F0089E41F /* experienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C43CE421A5B27F0089E41F /* experienceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7583E2422199CB22006AA4EA /* CV-Lab2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CV-Lab2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7583E2462199CB22006AA4EA /* CV_Lab2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV_Lab2UITests.swift; sourceTree = "<group>"; };
 		7583E2482199CB22006AA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C43CE421A5B27F0089E41F /* experienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = experienceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				7583E22D2199CB22006AA4EA /* Assets.xcassets */,
 				7583E22F2199CB22006AA4EA /* LaunchScreen.storyboard */,
 				7583E2322199CB22006AA4EA /* Info.plist */,
+				75C43CE421A5B27F0089E41F /* experienceViewController.swift */,
 			);
 			path = "CV-Lab2";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				7583E2292199CB21006AA4EA /* ViewController.swift in Sources */,
 				7583E2272199CB21006AA4EA /* AppDelegate.swift in Sources */,
+				75C43CE521A5B27F0089E41F /* experienceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
