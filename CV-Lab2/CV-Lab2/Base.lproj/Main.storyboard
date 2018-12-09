@@ -58,6 +58,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Jonatan Flyckt" id="RCn-Q3-acE"/>
                     <connections>
+                        <outlet property="contactText" destination="HkQ-Co-YS3" id="tzX-wc-LET"/>
+                        <outlet property="descriptionText" destination="6W4-jj-WGe" id="mm6-qq-ROl"/>
+                        <outlet property="portrait" destination="4c6-o1-NwE" id="bPo-cV-7fw"/>
                         <segue destination="afh-4p-ZFc" kind="show" identifier="experienceSegue" id="FDq-nZ-Xd2"/>
                     </connections>
                 </viewController>
@@ -74,11 +77,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceTableViewCell" rowHeight="96" id="zaw-0s-EnL" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceTableViewCell" rowHeight="188" id="zaw-0s-EnL" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaw-0s-EnL" id="a3V-eN-vUA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aA-dw-lH4">

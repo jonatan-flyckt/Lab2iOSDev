@@ -14,11 +14,11 @@ class ExperienceTableViewController: UITableViewController {
     var experiences = [[Experience]]()
     
     private func populateExperiences(){
-        let work1 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2008-2013", description: "One To One AB, telemarketing full time.")
-        let work2 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2013-2015", description: "Solid Business Sverige AB, telemarketing full time.")
-        let work3 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2015-", description: "Premium Sales AB, telemarketing part time.")
-        let education1 = Experience(image: UIImage(), title: "Tekniskt Basår", timePeriod: "2015-2016", description: "Preparational year with physics, maths and chemistry at Jönköping University")
-        let education2 = Experience(image: UIImage(), title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping University")
+        let work1 = Experience(image: UIImage(named: "work"), title: "Account Manager", timePeriod: "2008-2013", description: "One To One AB, telemarketing full time.")
+        let work2 = Experience(image: UIImage(named: "work"), title: "Account Manager", timePeriod: "2013-2015", description: "Solid Business Sverige AB, telemarketing full time.")
+        let work3 = Experience(image: UIImage(named: "work"), title: "Account Manager", timePeriod: "2015-", description: "Premium Sales AB, telemarketing part time.")
+        let education1 = Experience(image: UIImage(named: "education"), title: "Tekniskt Basår", timePeriod: "2015-2016", description: "Preparational year with physics, maths and chemistry at Jönköping University")
+        let education2 = Experience(image: UIImage(named: "education"), title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping University")
         
         self.experiences.append([work1, work2, work3])
         self.experiences.append([education1, education2])

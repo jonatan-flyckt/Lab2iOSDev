@@ -10,8 +10,15 @@ import UIKit
 
 class MainViewController: UIViewController{
     
+    @IBOutlet weak var portrait: UIImageView!
+    
+    @IBOutlet weak var descriptionText: UILabel!
+    
+    @IBOutlet weak var contactText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.portrait.image = UIImage(named: "me")
     }
     
     @IBAction func experienceButton(_ sender:UIButton){
