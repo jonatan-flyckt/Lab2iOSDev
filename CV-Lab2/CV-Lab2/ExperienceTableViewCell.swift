@@ -27,7 +27,7 @@ class ExperienceTableViewCell: UITableViewCell{
 }
 
 struct Experience {
-    var imageName: String
+    var image: UIImage?
     var title: String
     var timePeriod: String
     var description: String

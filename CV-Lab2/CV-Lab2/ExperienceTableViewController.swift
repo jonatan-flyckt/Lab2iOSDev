@@ -14,11 +14,11 @@ class ExperienceTableViewController: UITableViewController {
     var experiences = [[Experience]]()
     
     private func populateExperiences(){
-        let work1 = Experience(imageName: "placeHolder", title: "Account Manager", timePeriod: "2008-2013", description: "One To One AB, telemarketing full time.")
-        let work2 = Experience(imageName: "placeHolder", title: "Account Manager", timePeriod: "2013-2015", description: "Solid Business Sverige AB, telemarketing full time.")
-        let work3 = Experience(imageName: "placeHolder", title: "Account Manager", timePeriod: "2015-", description: "Premium Sales AB, telemarketing part time.")
-        let education1 = Experience(imageName: "placeHolder", title: "Tekniskt Basår", timePeriod: "2015-2016", description: "Preparational year with physics, maths and chemistry at Jönköping University")
-        let education2 = Experience(imageName: "placeHolder", title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping University")
+        let work1 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2008-2013", description: "One To One AB, telemarketing full time.")
+        let work2 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2013-2015", description: "Solid Business Sverige AB, telemarketing full time.")
+        let work3 = Experience(image: UIImage(), title: "Account Manager", timePeriod: "2015-", description: "Premium Sales AB, telemarketing part time.")
+        let education1 = Experience(image: UIImage(), title: "Tekniskt Basår", timePeriod: "2015-2016", description: "Preparational year with physics, maths and chemistry at Jönköping University")
+        let education2 = Experience(image: UIImage(), title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping University")
         
         self.experiences.append([work1, work2, work3])
         self.experiences.append([education1, education2])
@@ -45,7 +45,7 @@ class ExperienceTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let experience = experiences[indexPath.section][indexPath.row]
-        cell.expImage.image = UIImage(named: experience.imageName)
+        cell.expImage.image = experience.image
         cell.expTime.text = experience.timePeriod
         cell.expTitle.text = experience.title
         return cell
@@ -55,6 +55,18 @@ class ExperienceTableViewController: UITableViewController {
         return sections[titleForHeaderInSection]
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ExperienceDetailViewController {
+            if let indexPath = sender as? IndexPath {
+                let experience = experiences[indexPath.section][indexPath.row]
+                destination.experience = experience
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ExperienceDetailSegue", sender: indexPath)
+    }
     
     /*
     // MARK: - Navigation

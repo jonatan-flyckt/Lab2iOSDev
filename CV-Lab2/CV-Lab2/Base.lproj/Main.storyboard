@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="10" y="18"/>
         </scene>
-        <!--Experience-->
+        <!--Experience Table View Controller-->
         <scene sceneID="LjH-qQ-inl">
             <objects>
                 <tableViewController id="afh-4p-ZFc" customClass="ExperienceTableViewController" customModule="CV_Lab2" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,11 +113,55 @@
                             <outlet property="delegate" destination="afh-4p-ZFc" id="Az4-VY-kEB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Experience" id="DgW-SM-JYv"/>
+                    <connections>
+                        <segue destination="Who-Jm-Goa" kind="show" identifier="ExperienceDetailSegue" id="4yp-wb-P1q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7t-fN-NJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="-343.17841079460271"/>
+        </scene>
+        <!--Experience Detail-->
+        <scene sceneID="pwI-ja-ya1">
+            <objects>
+                <viewController id="Who-Jm-Goa" customClass="ExperienceDetailViewController" customModule="CV_Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="57k-Mn-aiC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-A0-7m0">
+                                <rect key="frame" x="57" y="64" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSP-Ug-hcM">
+                                <rect key="frame" x="78" y="244" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doC-ai-otw">
+                                <rect key="frame" x="57" y="309" width="250" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lYX-iq-P3b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Experience Detail" id="4jv-f9-zEg"/>
+                    <connections>
+                        <outlet property="detailsDescription" destination="doC-ai-otw" id="M5j-Y7-hg6"/>
+                        <outlet property="detailsImage" destination="UDY-A0-7m0" id="UI4-zB-67L"/>
+                        <outlet property="detailsTimePeriod" destination="aSP-Ug-hcM" id="J9H-Ij-YOJ"/>
+                        <outlet property="navigation" destination="4jv-f9-zEg" id="de7-o6-fLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iV1-mO-ayp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680.8" y="-528.48575712143929"/>
         </scene>
         <!--Skills-->
         <scene sceneID="FBD-aH-Pqv">
