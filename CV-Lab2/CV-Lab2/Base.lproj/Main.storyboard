@@ -66,7 +66,7 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6W4-jj-WGe">
                                 <rect key="frame" x="16" y="283" width="343" height="177"/>
-                                <mutableString key="text">Sed ut perspiciatis unde omnis iste natus  error sitvoluptatem accusantium doloremque  laudantium, totam rem aperiam, eaque ipsa  quae ab illo inventore veritatis et quasi  architecto beatae vitae dicta sunt explicabo.  Nemo enim ipsam voluptatem quia voluptas  sit aspernatur aut odit aut fugit, sed quia  consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro  quisquam est, qui dolorem ipsum quia dolor  sit amet, consectetur, adipisci velit, sed quia</mutableString>
+                                <string key="text">Sed ut perspiciatis unde omnis iste natus  error sitvoluptatem accusantium doloremque  laudantium, totam rem aperiam, eaque ipsa  quae ab illo inventore veritatis et quasi  architecto beatae vitae dicta sunt explicabo.  Nemo enim ipsam voluptatem quia voluptas  sit aspernatur aut odit aut fugit, sed quia  consequuntur magni dolores eos qui ratione  voluptatem sequi nesciunt. Neque porro  quisquam est, qui dolorem ipsum quia dolor  sit amet, consectetur, adipisci velit, sed quia</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -248,18 +248,44 @@
         <!--Skills-->
         <scene sceneID="FBD-aH-Pqv">
             <objects>
-                <viewController id="xYp-DS-XwJ" sceneMemberID="viewController">
+                <viewController id="xYp-DS-XwJ" customClass="SkillsViewController" customModule="CV_Lab2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nl4-Ty-9uE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vM5-II-jaq">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ljJ-ao-Bto"/>
+                                    <constraint firstAttribute="width" constant="200" id="mFZ-FK-XSd"/>
+                                    <constraint firstAttribute="width" secondItem="vM5-II-jaq" secondAttribute="height" multiplier="1:1" id="wYd-TS-Yf3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIT ME IN THE HEAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRX-W8-DK4">
+                                <rect key="frame" x="47" y="126" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vM5-II-jaq" firstAttribute="top" secondItem="lAQ-Bl-eN9" secondAttribute="top" constant="169.5" id="Ord-uD-2ec"/>
+                            <constraint firstItem="lAQ-Bl-eN9" firstAttribute="bottom" secondItem="vM5-II-jaq" secondAttribute="bottom" constant="233.5" id="Y88-5T-JGr"/>
+                            <constraint firstItem="lAQ-Bl-eN9" firstAttribute="trailing" secondItem="vM5-II-jaq" secondAttribute="trailing" constant="87.5" id="aQP-Hc-PGu"/>
+                            <constraint firstItem="vM5-II-jaq" firstAttribute="leading" secondItem="lAQ-Bl-eN9" secondAttribute="leading" constant="87.5" id="fwC-Xu-iXb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lAQ-Bl-eN9"/>
                     </view>
                     <navigationItem key="navigationItem" title="Skills" id="ewg-BL-uWg"/>
+                    <connections>
+                        <outlet property="imageView" destination="vM5-II-jaq" id="rcx-65-gMS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTL-2d-Tac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="347"/>
+            <point key="canvasLocation" x="784.79999999999995" y="346.77661169415296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZF-bo-fTq">
