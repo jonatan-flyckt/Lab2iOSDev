@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CV_Lab2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CVViewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CVViewController" customModule="CV_Lab2" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -58,12 +58,66 @@
                     </view>
                     <navigationItem key="navigationItem" title="Jonatan Flyckt" id="RCn-Q3-acE"/>
                     <connections>
-                        <segue destination="6V2-kV-Ggv" kind="show" identifier="experienceSegue" id="NGA-J6-xyJ"/>
+                        <segue destination="afh-4p-ZFc" kind="show" identifier="experienceSegue" id="FDq-nZ-Xd2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10" y="18"/>
+        </scene>
+        <!--Experience-->
+        <scene sceneID="LjH-qQ-inl">
+            <objects>
+                <tableViewController id="afh-4p-ZFc" customClass="ExperienceTableViewController" customModule="CV_Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="htX-zP-zY4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceTableViewCell" rowHeight="96" id="zaw-0s-EnL" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaw-0s-EnL" id="a3V-eN-vUA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aA-dw-lH4">
+                                            <rect key="frame" x="0.0" y="-5" width="136" height="105"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fX7-Lc-72U">
+                                            <rect key="frame" x="166" y="11" width="167" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-hM-2ce">
+                                            <rect key="frame" x="166" y="64" width="167" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="expImage" destination="8aA-dw-lH4" id="vsj-TW-m9P"/>
+                                    <outlet property="expTime" destination="ad6-hM-2ce" id="Mfs-tI-2Js"/>
+                                    <outlet property="expTitle" destination="fX7-Lc-72U" id="Klx-c8-UGW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="afh-4p-ZFc" id="sfo-1j-2Nb"/>
+                            <outlet property="delegate" destination="afh-4p-ZFc" id="Az4-VY-kEB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Experience" id="DgW-SM-JYv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7t-fN-NJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-343.17841079460271"/>
         </scene>
         <!--Skills-->
         <scene sceneID="FBD-aH-Pqv">
@@ -80,57 +134,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTL-2d-Tac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="785" y="347"/>
-        </scene>
-        <!--Experiences-->
-        <scene sceneID="eGT-JC-IGy">
-            <objects>
-                <viewController id="6V2-kV-Ggv" customClass="ExperienceTableViewController" customModule="CV_Lab2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="quH-wT-nHI" customClass="UITableView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheCell" rowHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-B7-T7I" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="173" width="375" height="85"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghR-B7-T7I" id="g2O-3M-2ZG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9g1-Yd-dcA">
-                                            <rect key="frame" x="0.0" y="-22" width="103" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQd-wj-hBy">
-                                            <rect key="frame" x="111" y="0.0" width="249" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg4-oX-mBg">
-                                            <rect key="frame" x="111" y="50" width="249" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="expImage" destination="9g1-Yd-dcA" id="PP2-jw-Y1b"/>
-                                    <outlet property="expTime" destination="Cg4-oX-mBg" id="Y6b-a1-FF1"/>
-                                    <outlet property="expTitle" destination="fQd-wj-hBy" id="tZi-NX-tHg"/>
-                                </connections>
-                            </tableViewCell>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ekG-Lu-r3Q"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Experiences" id="rCW-YF-Iop"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AHE-Vu-2NY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="780" y="-328.78560719640183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CZF-bo-fTq">

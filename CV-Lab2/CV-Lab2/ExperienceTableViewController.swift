@@ -26,12 +26,9 @@ class ExperienceTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TheCell")
         super.viewDidLoad()
-        
         populateExperiences()
 
-        // Do any additional setup after loading the view.
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,16 +40,7 @@ class ExperienceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ExperienceTableViewCell{
-            let experience = experiences[indexPath.section][indexPath.row]
-            cell.expImage.image = UIImage(named: experience.imageName)
-            cell.expTitle.text = experience.title
-            cell.expTime.text = experience.timePeriod
-            return cell
-        } else {
-            return UITableViewCell()
-        }*/
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TheCell", for: indexPath) as? ExperienceTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as? ExperienceTableViewCell else {
             //fatalError("error")
             return UITableViewCell()
         }
