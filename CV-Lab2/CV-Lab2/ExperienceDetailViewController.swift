@@ -24,6 +24,7 @@ class ExperienceDetailViewController: UIViewController {
         super.viewDidLoad()
         navigation.title = experience.title
         detailsImage.image = experience.image
+        detailsImage.contentMode = .scaleAspectFit
         detailsDescription.text = experience.description
         detailsTimePeriod.text = experience.timePeriod
     }

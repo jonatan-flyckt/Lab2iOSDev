@@ -10,7 +10,7 @@ import UIKit
 
 class ExperienceTableViewController: UITableViewController {
 
-    var sections = ["Work", "Education"]
+    var sections = ["Work Experience", "Education"]
     var experiences = [[Experience]]()
     
     private func populateExperiences(){
@@ -18,7 +18,7 @@ class ExperienceTableViewController: UITableViewController {
         let work2 = Experience(image: UIImage(named: "work"), title: "Account Manager", timePeriod: "2013-2015", description: "Solid Business Sverige AB, telemarketing full time.")
         let work3 = Experience(image: UIImage(named: "work"), title: "Account Manager", timePeriod: "2015-", description: "Premium Sales AB, telemarketing part time.")
         let education1 = Experience(image: UIImage(named: "education"), title: "Tekniskt Basår", timePeriod: "2015-2016", description: "Preparational year with physics, maths and chemistry at Jönköping University")
-        let education2 = Experience(image: UIImage(named: "education"), title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping University")
+        let education2 = Experience(image: UIImage(named: "education"), title: "Datateknik - Mjukvaruutveckling och mobila plattformar", timePeriod: "2016-2019", description: "Software engineering studies at Jönköping \nUniversity")
         
         self.experiences.append([work1, work2, work3])
         self.experiences.append([education1, education2])
@@ -46,6 +46,7 @@ class ExperienceTableViewController: UITableViewController {
         }
         let experience = experiences[indexPath.section][indexPath.row]
         cell.expImage.image = experience.image
+        cell.expImage.contentMode = .scaleAspectFit
         cell.expTime.text = experience.timePeriod
         cell.expTitle.text = experience.title
         return cell
