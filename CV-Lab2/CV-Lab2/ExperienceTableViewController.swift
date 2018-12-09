@@ -26,7 +26,9 @@ class ExperienceTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TheCell")
         super.viewDidLoad()
+        
         populateExperiences()
 
         // Do any additional setup after loading the view.
@@ -41,7 +43,7 @@ class ExperienceTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ExperienceTableViewCell{
+        /*if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ExperienceTableViewCell{
             let experience = experiences[indexPath.section][indexPath.row]
             cell.expImage.image = UIImage(named: experience.imageName)
             cell.expTitle.text = experience.title
@@ -49,7 +51,16 @@ class ExperienceTableViewController: UITableViewController {
             return cell
         } else {
             return UITableViewCell()
+        }*/
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TheCell", for: indexPath) as? ExperienceTableViewCell else {
+            //fatalError("error")
+            return UITableViewCell()
         }
+        let experience = experiences[indexPath.section][indexPath.row]
+        cell.expImage.image = UIImage(named: experience.imageName)
+        cell.expTime.text = experience.timePeriod
+        cell.expTitle.text = experience.title
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection: Int) -> String{

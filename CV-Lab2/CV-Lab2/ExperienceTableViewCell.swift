@@ -11,7 +11,9 @@ import UIKit
 class ExperienceTableViewCell: UITableViewCell{
     
     @IBOutlet weak var expImage: UIImageView!
+    
     @IBOutlet weak var expTitle: UILabel!
+    
     @IBOutlet weak var expTime: UILabel!
     
     override func awakeFromNib() {

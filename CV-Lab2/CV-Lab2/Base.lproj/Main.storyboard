@@ -84,12 +84,12 @@
         <!--Experiences-->
         <scene sceneID="eGT-JC-IGy">
             <objects>
-                <viewController id="6V2-kV-Ggv" customClass="ExperienceTableViewController" sceneMemberID="viewController">
+                <viewController id="6V2-kV-Ggv" customClass="ExperienceTableViewController" customModule="CV_Lab2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="quH-wT-nHI" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-B7-T7I" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TheCell" rowHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-B7-T7I" customClass="ExperienceTableViewCell" customModule="CV_Lab2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="173" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghR-B7-T7I" id="g2O-3M-2ZG">
