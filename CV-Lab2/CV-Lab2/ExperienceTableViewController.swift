@@ -8,7 +8,7 @@
 
 import UIKit
 
-class experienceViewController: UIViewController {
+class ExperienceTableViewController: UITableViewController {
 
     var sections = ["Work", "Education"]
     var experiences = [[Experience]]()
@@ -32,15 +32,15 @@ class experienceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->Int {
         return experiences[section].count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ExperienceTableViewCell{
             let experience = experiences[indexPath.section][indexPath.row]
             cell.expImage.image = UIImage(named: experience.imageName)
@@ -52,7 +52,7 @@ class experienceViewController: UIViewController {
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection: Int) -> String{
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection: Int) -> String{
         return sections[titleForHeaderInSection]
     }
     

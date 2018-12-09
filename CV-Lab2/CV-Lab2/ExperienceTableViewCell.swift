@@ -10,9 +10,9 @@ import UIKit
 
 class ExperienceTableViewCell: UITableViewCell{
     
-    @IBOutlet var expImage: UIImageView!
-    @IBOutlet var expTitle: UILabel!
-    @IBOutlet var expTime: UILabel!
+    @IBOutlet weak var expImage: UIImageView!
+    @IBOutlet weak var expTitle: UILabel!
+    @IBOutlet weak var expTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
